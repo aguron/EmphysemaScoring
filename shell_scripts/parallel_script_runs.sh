@@ -31,11 +31,11 @@ fi
 if [ "$type" == 'mAs' ]
 then
     declare -a arr=('orig' 'pbda' '15' '1.5') # mAs-modified dose
-    declare -a arr2=(0 0 1 1) # set to 1 if generated already
+    declare -a arr2=(0 1 1 1) # set to 0 for preprocessing; otherwise, set to 1
 elif [ "$type" == 'z' ]
 then
     declare -a arr=('pbda' '2' '3') # slice thickness modification
-    declare -a arr2=(1 1 1) # set to 1 if generated already
+    declare -a arr2=(1 1 1) # set to 0 for preprocessing; otherwise, set to 1
 fi
 
 count=0

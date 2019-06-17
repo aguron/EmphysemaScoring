@@ -1,9 +1,8 @@
 #!/bin/bash
-# Script for partitioning LIDC-IDRI into CT data for training, validation, and testing
-#
-# script processing range selection; full range {1..20}
-r_start=6
-r_end=$r_start
+# Script for partitioning LIDC-IDRI into CT data for training, validation, and testing.
+# Script processing range selection; full range {1..20}
+r_start=1
+r_end=20 # $r_start
 
 for type in mAs # z
 do
