@@ -6,6 +6,10 @@ Adapted from a [U-Net implementation by zhixuhao](https://github.com/zhixuhao/un
 
 ## Overview
 
+### Emphysema
+
+Emphysema is the most common form of chronic obstructive lung disease, which is the third leading cause of the death in the United States. Emphysema is often assessed with the RA950 score, which segments out dead lung tissue in a CT scan. In this project, we train a neural network to perform the segmentations.
+
 ### Dataset
 
 Please download the [LIDC-IDRI database](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)
@@ -53,6 +57,10 @@ We modified the [U-Net implementation by zhixuhao](https://github.com/zhixuhao/u
 
 ### Lung CT RA950 Predictions
 
+The following image is representative of when the relative segmentation foreground-background sample (pixel) training loss weighting is just about right. The average dice coefficient based on images selected for evaluation was 0.946.
+
+![example_images/CT_slice_predict.png](example_images/CT_slice_predict.png)
+
 The following image is representative of when the relative segmentation foreground-background sample (pixel) training loss weighting could be increased. The average dice coefficient based on images selected for evaluation was 0.378.
 
 ![example_images/CT_slice_predict_f_w_l.png](example_images/CT_slice_predict_f_w_l.png)
@@ -60,8 +68,3 @@ The following image is representative of when the relative segmentation foregrou
 The following image is representative of when the relative segmentation foreground-background sample (pixel) training loss weighting could be decreased. The average dice coefficient based on images selected for evaluation was 0.121.
 
 ![example_images/CT_slice_predict_f_w_m.png](example_images/CT_slice_predict_f_w_m.png)
-
-The following image is representative of when the relative segmentation foreground-background sample (pixel) training loss weighting is just about right. The average dice coefficient based on images selected for evaluation was 0.946.
-
-![example_images/CT_slice_predict.png](example_images/CT_slice_predict.png)
-
